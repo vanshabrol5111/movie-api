@@ -1,0 +1,223 @@
+*{
+   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+  
+    background-image: url(./laptop-5673901.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  
+   max-width: 100%;
+   width: 100vw;
+
+}
+
+nav{
+    height: 7vh;
+    width: 100%;
+    max-width: 100%;
+ background-color: rgb(14, 201, 39);
+ display: flex;
+ justify-content: center;
+ justify-content: space-between;
+ align-items: center;
+ padding-left: 1rem;
+ padding-right: 1rem;
+
+}
+
+.searchBox{
+    display: flex;
+    gap: 1rem;
+    height: 7vh;
+}
+.searchBox>button>svg{
+    scale: 1.8;
+   
+}
+.searchinput{
+ all: unset;
+ max-height: 2rem;
+ min-height: 2rem;
+ width: 26rem;
+ border-radius: 1rem;
+ padding-left: 0.5rem;
+ background-color: white;
+ border-bottom-left-radius: 1rem;
+ border-bottom-right-radius: 1rem;
+ 
+}
+.activeinput{
+    all: unset;
+    max-height: 2rem;
+    min-height: 2rem;
+    width: 26rem;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    background-color: white;
+ border-bottom-left-radius: 0rem;
+ border-bottom-right-radius: 0rem;
+}
+.searchData{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.3vh;
+    z-index: 1;
+ 
+}
+main{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+
+}
+.movieContainer{
+   
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.fullwidth{
+    width: 100vw;
+}
+.infoContainer{
+    background-color:white;
+    height: fit;
+    position: absolute;
+    right: 0;
+
+    
+  
+}
+.infolist{
+    list-style-type: none;
+    margin: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    display:none;
+    cursor: pointer;
+  
+}
+.active{
+    display: flex;
+    position: relative;
+   
+  
+  
+}
+.infolist>li{
+    font-size: large;
+}
+.title{
+
+    color: black;
+    text-wrap: pretty;
+}
+
+
+.image{
+    object-fit: fill;
+    height: 13rem;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.datacontainer{
+    margin-top: 0.2rem;
+    padding-left: 0.5rem;
+
+}
+.card{
+    margin: 1rem;
+border: 1px solid white;
+border-radius: 1rem;
+height: 22rem;
+width: 15rem;
+background-color: white;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding-bottom: rem;
+/* gap: 1rem; */
+
+}
+.like{
+    width: 2.2rem;
+    padding-left: 1rem;
+    margin-top: 0.2rem;
+}
+[searchResult]{
+  
+    width: 26.5rem;
+   display: flex;
+   margin-top: -0.1rem;
+   flex-direction: column;
+   gap: 0.5rem;
+   padding-left: 1rem;
+    background-color: white;
+  
+ 
+}
+[searchResult]:last-child{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.resultitem:hover{
+   background-color: rgba(128, 128, 128, 0.448);
+}
+.back{
+    position: absolute;
+    top: 8vh;
+    left: 1rem;
+    color: white;
+}
+
+[myProfile]{
+    object-fit: cover;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+   
+}
+
+@media (max-width:650px){
+    .searchinput{
+        width: 20rem;
+    }
+    [searchResult]{
+        width: 20.5rem;
+    }
+}
+@media (max-width:540px){
+    .searchinput{
+        width: 9rem;
+    }
+    [searchResult]{
+        width: 9.5rem;
+    }
+}
+@media (max-width:360px){
+    nav{
+        flex-direction: column;
+        height: 12vh;
+        z-index: 11;
+    }
+    [myProfile]{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
